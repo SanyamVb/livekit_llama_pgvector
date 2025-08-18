@@ -1,0 +1,11 @@
+llama_index
+llama_index-core
+livekit-agents
+livekit-plugins-deepgram
+livekit-plugins-openai
+livekit-plugins-silero
+dotenv
+livekit-agents[openai]~=1.2
+llama-index-vector-stores-postgres
+llama-index-llms-google-genai
+livekit-agents[google]~=1.2

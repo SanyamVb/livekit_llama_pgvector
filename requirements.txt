@@ -6,6 +6,9 @@ livekit-plugins-openai
 livekit-plugins-silero
 dotenv
 livekit-agents[openai]~=1.2
+livekit-agents[groq]~=1.2
 llama-index-vector-stores-postgres
 llama-index-llms-google-genai
 livekit-agents[google]~=1.2
+nest_asyncio
+fastapi[all]

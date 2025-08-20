@@ -8,7 +8,7 @@ from llama_index.core.llms import ChatMessage, MessageRole
 
 from livekit.agents import Agent, llm
 from livekit.agents.voice.agent import ModelSettings
-from livekit.plugins import deepgram, openai, silero, google
+from livekit.plugins import groq, openai, silero, google
 
 load_dotenv()
 
@@ -22,7 +22,10 @@ class ChatEngineAgent(Agent):
                 "responses, and avoiding usage of unpronouncable punctuation."
             ),
             vad=silero.VAD.load(),
-            stt=deepgram.STT(),
+            stt=groq.STT(
+                model="whisper-large-v3-turbo",
+                language="en",
+            ),
             llm=google.LLM(
                 model="gemini-2.0-flash",
             ),
